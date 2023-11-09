@@ -1,0 +1,82 @@
+.navbar-left a {
+  color: black;
+  font-size: 17px;
+}
+
+.navbar-right input {
+  width: 200px;
+  border-radius: 0.375rem;
+  border: 1px solid #6c757d;
+}
+.navbar-right input::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::-moz-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input:-ms-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::-ms-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::placeholder {
+  padding-left: 5px;
+}
+.navbar-right button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.article {
+  margin-top: 10px;
+}
+
+.left-side .breadcrumbs {
+  background-color: #eaecef;
+  border-radius: 4px;
+}
+.left-side ol {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-side li {
+  font-size: 17px;
+}
+.left-side .comment {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.left-side .comment form {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.left-side .comment textarea {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left-side .comments {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left-side .comments .avatar {
+  margin-right: 10px;
+}
+
+.right-side .latest-articles {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #eaecef;
+}
+.footer .container {
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer p {
+  margin-bottom: 0;
+}

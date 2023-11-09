@@ -1,0 +1,80 @@
+// STYLES FOR HEADER
+.navbar-left {
+    a {
+        color: black;
+        font-size: 17px;
+    }
+}
+
+.navbar-right {
+
+    input {
+        width: 200px;
+        border-radius: 0.375rem;
+        border: 1px solid #6c757d;
+    }
+
+    input::placeholder {
+        padding-left: 5px;
+    }
+
+    button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+// STYLES FOR SLIDER
+.home-slider {
+    padding: 0;
+    margin-bottom: 15px;
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+
+    h5 {
+        font-size: 60px;
+    }
+
+    p {
+        font-size: 30px;
+    }
+
+    .carousel-caption {
+        bottom: 100px;
+    }
+
+}
+
+// STYLES FOR CARDS
+.row {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card {
+    box-shadow: 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.pagination {
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.footer {
+    background-color: #eaecef;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    .container {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

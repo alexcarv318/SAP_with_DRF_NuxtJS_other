@@ -1,0 +1,76 @@
+// STYLES FOR HEADER
+.navbar-left {
+    a {
+        color: black;
+        font-size: 17px;
+    }
+}
+
+.navbar-right {
+
+    input {
+        width: 200px;
+        border-radius: 0.375rem;
+        border: 1px solid #6c757d;
+    }
+
+    input::placeholder {
+        padding-left: 5px;
+    }
+
+    button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+// STYLES FOR MAIN
+.container {
+
+    .breadcrumb {
+        background-color: #eaecef;
+        border-radius: 4px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    ol {
+        padding-top: 7px;
+        padding-bottom: 7px;
+    }
+    
+    li {
+        font-size: 17px;
+        padding-left: 5px;
+    }
+
+    .form-container {
+        margin-top: 10%;
+    }
+
+    .registration-form {
+        input, textarea {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// STYLES FOR FOOTER
+.footer {
+    background-color: #eaecef;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;   
+
+    .container {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
