@@ -1,0 +1,7 @@
+.env
+__pycache__
+venv
+.gitattributes
+prepros.config
+some.py 
+some.txt

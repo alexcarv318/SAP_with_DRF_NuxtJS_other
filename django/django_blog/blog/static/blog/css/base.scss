@@ -1,3 +1,8 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 // STYLES FOR HEADER
 .navbar-left {
     a {
@@ -27,6 +32,11 @@
 // STYLES FOR FOOTER
 .footer {
     background-color: #eaecef;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 71px;
+    width: 100%;
 
     .container {
         height: 100%;

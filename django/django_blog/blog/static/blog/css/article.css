@@ -1,0 +1,45 @@
+.article {
+  margin-top: 10px;
+}
+
+.left-side .breadcrumbs {
+  background-color: #eaecef;
+  border-radius: 4px;
+}
+.left-side ol {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.left-side li {
+  font-size: 17px;
+}
+.left-side .comment {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.left-side .comment form {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.left-side .comment textarea {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left-side .comments {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.left-side .comments .avatar {
+  margin-right: 10px;
+}
+
+.right-side .latest-articles {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: block;
+  position: relative;
+}

@@ -1,13 +1,12 @@
-// STYLES FOR MAIN
 .container {
 
-    .breadcrumb {
+    .breadcrumbs {
         background-color: #eaecef;
         border-radius: 4px;
         margin-top: 10px;
         margin-bottom: 10px;
     }
-
+    
     ol {
         padding-top: 7px;
         padding-bottom: 7px;
@@ -18,19 +17,7 @@
         padding-left: 5px;
     }
 
-    .form-container {
+    h1 {
         margin-top: 10%;
-    }
-
-    .error {
-        width: 100%;
-        text-align: center;
-    }
-
-    .login-form {
-        input, textarea {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
     }
 }

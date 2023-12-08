@@ -57,9 +57,12 @@
                 <div class="card-body">
                     <h5 class="card-title">{{post.title}}</h5>
                     <p class="card-text">{{post.description|safe|truncatechars:90}}</p>
+                    {% for tag in post.tag.all %}
+                        <a href="{% url 'tag' slug=tag.slug %}"><p class="badge bg-primary">#{{tag}}</p></a>
+                    {% endfor %}
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <a href="#" class="btn btn-sm btn-outline-secondary">Details</a>
+                            <a href="{% url 'article' slug=post.url %}" class="btn btn-sm btn-outline-secondary">Details</a>
                         </div>
                         <small class="text-muted">{{post.created_at}}</small>  
                     </div>
@@ -71,8 +74,8 @@
 </div>
 
 <!-- PAGINATION -->
-<nav class="pag" aria-label="Page navigation example">
-    <ul class="pagination">
+<nav class="pag">
+    <ul class="pagination d-flex justify-content-center">
         {% if page_obj.has_previous %}
         <li class="page-item"><a class="page-link" href="?page={{page_obj.previous_page_number}}">Previous</a></li>
         {% else %}

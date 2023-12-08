@@ -1,4 +1,4 @@
-.container .breadcrumb {
+.container .breadcrumbs {
   background-color: #eaecef;
   border-radius: 4px;
   margin-top: 10px;
@@ -12,14 +12,6 @@
   font-size: 17px;
   padding-left: 5px;
 }
-.container .form-container {
+.container h1 {
   margin-top: 10%;
-}
-.container .error {
-  width: 100%;
-  text-align: center;
-}
-.container .login-form input, .container .login-form textarea {
-  margin-top: 10px;
-  margin-bottom: 10px;
 }

@@ -1,0 +1,22 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block style %}{% static "blog/css/success.css" %}{% endblock style %}
+
+{% block title %}Success!{% endblock title %}
+
+{% block body %}
+<div class="container">
+
+    <nav aria-label="breadcrumb" class="breadcrumbs">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+    </nav>
+
+    <h3 class="text-center">Thank you! Your message was sended succesfully.</h3>
+
+<div>
+{% endblock body %}

@@ -1,0 +1,58 @@
+{% extends "blog/base.html" %}
+
+{% load static %}
+
+{% block title %}Sign Up{% endblock title %}
+
+{% block style %}{% static "blog/css/registration.css" %}{% endblock style %}
+
+{% block body %}
+<div class="container">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Sign up</li>
+        </ol>
+    </nav>
+
+    <div class="form-container d-flex flex-column justify-content-center align-items-center">
+        
+        <h3>To sign up, please provide your username and password</h3>
+
+        <form action="{% url 'signup' %}" method="post" class="registration-form">
+            {% csrf_token %}
+
+            {% if form.errors %}
+                {% for field in form %}
+                    {% for error in field.errors %}
+                        <div class="alert alert-danger error">
+                            <strong>{{ error|escape }}</strong>
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+                {% for error in form.non_field_errors %}
+                    <div class="alert alert-danger error">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            
+            <div class="row">
+                <div class="col-12">
+                    {{form.username}}
+                </div>
+                <div class="col-12">
+                    {{form.password}}
+                </div>
+                <div class="col-12">
+                    {{form.repeat_password}}
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+</div>
+{% endblock body %}

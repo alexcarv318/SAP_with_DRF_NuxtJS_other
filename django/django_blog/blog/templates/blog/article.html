@@ -1,0 +1,99 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}{{post.title}}{% endblock title %}
+
+{% block style %}{% static "blog/css/article.css" %}{% endblock style %}
+
+{% block body %}
+<div class="container article">
+    <div class="row article-row">
+
+        <div class="col-8 left-side">
+            <div class="container breadcrumbs">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">{{post.title}}</li>
+                    </ol>
+                  </nav>
+            </div>
+            <img src="{{post.image.url}}" class="img-fluid" alt="image" style="width: 856px;">
+            <hr>
+            <p class="fs-3">
+                {{post.title}}
+            </p>
+            <p class="fs-6">
+                {{post.content|safe}}
+            </p>
+            <hr>
+            <p class="lead d-flex justify-content-end">Author: <a href="#" class="text-decoration-none">{{post.author}}</a></p>
+            <hr>
+            <small class="muted d-flex justify-content-end">Publicated {{post.created_at}}</small>
+            <div class="card comment">
+                <div class="card-header">
+                    Leave a comment:
+                </div>
+                {% if user.is_authenticated %}
+                    <div class="container">
+                        <form method="post">
+                            {% csrf_token %}
+                            {{comment_form.text}}
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </form>
+                    </div>
+                {% else %}
+                    <div class="container">
+                        <p class="m-3"><a class="text-decoration-none" href="{% url 'signin' %}">Sign In</a> or <a class="text-decoration-none" href="{% url 'signup' %}">Sign Up</a> to leave a comment</p>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="comments d-flex flex-column m-3">
+                {% for comment in post.comments.all %}
+                <div class="comment d-flex flex-row">
+                    <div class="avatar">
+                        <img src="{% static "blog/img/user.png" %}" alt="User" style="height: 40px; width: 40px;">
+                    </div>
+                    <div>
+                        <p class="fs-5">{{ comment.username }}</p>
+                        <p class="fs-6">
+                            {{ comment.text }}
+                        </p>
+                    </div>
+                </div>
+                <hr>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="col-4 right-side">
+            <div class="card">
+                <div class="card-header">
+                  Tags
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        {% for tag in post.tag.all %}
+                            <a href="{% url 'tag' slug=tag.slug %}" class="col-4"><span class="badge bg-primary">#{{tag}}</span></a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            <div class="card latest-articles">
+                <div class="card-header">
+                  Latest articles
+                </div>
+                {% for post in last_posts %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.description|safe|truncatechars:150}}</p>
+                        <a href="{% url 'article' slug=post.url %}" class="card-link">Details</a>
+                        <hr>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock body %}

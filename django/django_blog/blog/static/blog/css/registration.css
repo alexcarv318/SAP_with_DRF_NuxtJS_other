@@ -19,7 +19,7 @@
   width: 100%;
   text-align: center;
 }
-.container .login-form input, .container .login-form textarea {
+.container .registration-form input, .container .registration-form textarea {
   margin-top: 10px;
   margin-bottom: 10px;
 }

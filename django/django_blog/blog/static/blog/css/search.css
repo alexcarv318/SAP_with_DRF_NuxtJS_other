@@ -1,0 +1,68 @@
+.navbar-left a {
+  color: black;
+  font-size: 17px;
+}
+
+.navbar-right input {
+  width: 200px;
+  border-radius: 0.375rem;
+  border: 1px solid #6c757d;
+}
+.navbar-right input::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::-moz-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input:-ms-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::-ms-input-placeholder {
+  padding-left: 5px;
+}
+.navbar-right input::placeholder {
+  padding-left: 5px;
+}
+.navbar-right button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.container .breadcrumbs {
+  background-color: #eaecef;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.container ol {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.container li {
+  font-size: 17px;
+  padding-left: 5px;
+}
+.container form input {
+  width: 50%;
+  border-radius: 0.375rem;
+  border: 1px solid #6c757d;
+}
+.container form input::-webkit-input-placeholder {
+  padding-left: 5px;
+}
+.container form input::-moz-placeholder {
+  padding-left: 5px;
+}
+.container form input:-ms-input-placeholder {
+  padding-left: 5px;
+}
+.container form input::-ms-input-placeholder {
+  padding-left: 5px;
+}
+.container form input::placeholder {
+  padding-left: 5px;
+}
+.container form button {
+  margin-left: 5px;
+  margin-right: 5px;
+}

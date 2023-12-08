@@ -1,0 +1,56 @@
+.article {
+    margin-top: 10px;
+}
+
+.left-side {
+    .breadcrumbs {
+        background-color: #eaecef;
+        border-radius: 4px;
+    }
+
+    ol {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    li {
+        font-size: 17px;
+    }
+
+    .comment {
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        form {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        textarea {
+            width: 80%;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .comments {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .avatar {
+            margin-right: 10px;
+        }
+    }
+}
+
+.right-side {
+    .latest-articles {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+.footer {
+    display: block;
+    position: relative;
+}
